@@ -1,101 +1,91 @@
-import Image from "next/image";
 
-export default function Home() {
-  return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="https://nextjs.org/icons/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-semibold">
-              src/app/page.tsx
-            </code>
-            .
-          </li>
-          <li>Save and see your changes instantly.</li>
-        </ol>
+import Navbar from "@/component/Header"
+import Footer from "@/component/Footer"
+import Image from "next/image"
+import image from "/Netxtjs Assignment/blog-web/public/image.jpg";
+import Link from "next/link";
+import image2 from "/Netxtjs Assignment/blog-web/public//m5c.webp"
+import image3 from "/Netxtjs Assignment/blog-web/public/m5d.webp"
+import image4 from "/Netxtjs Assignment/blog-web/public/m10a.webp"
+import image5 from "/Netxtjs Assignment/blog-web/public/m1b.webp" 
+import image6 from "/Netxtjs Assignment/blog-web/public/m7c.webp"
+import image7 from "/Netxtjs Assignment/blog-web/public/m8f.webp"
 
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="https://nextjs.org/icons/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:min-w-44"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
-        </div>
-      </main>
-      <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
+export default function Home(){
+  return(
+    <div className="home">
+      <div className="main-page">
+  <Navbar/>
+<div className="Image-banner">
+<Image src={image} alt="image" className="Image-banner-img"></Image>
+</div>
+
+<div className="blog-cards">
+
+<div className="card">
+  <div className="w-60 h-60 bg-orange-300 mx-1.5 ">
+  <Image src={image2} alt="image2"  className="h-60 "></Image>
+  </div>
+<h1 className="font-bold text-lg my-4" >Italian inspiration on a budget </h1>
+{/* <p> Lorem ipsum de praesentium officiis nemo sed soluta, iste nulla dolorum.</p> */}
+<Link href="/blog1">READ MORE</Link>
+</div>
+
+<div className="card">
+  <div className="w-60 h-60 bg-orange-300 mx-1.5">
+  <Image src={image3} alt="image3"  className="h-60 "></Image>
+  
+  </div>
+<h1 className="font-bold text-lg my-4">Plating made easy: feast with your eyes</h1>
+{/* <p> Lorem ipsum de praesentium officiis nemo sed soluta, iste nulla dolorum.</p> */}
+<Link href="/blog2">READ MORE</Link>
+</div>
+
+<div className="card">
+  <div className="w-60 h-60 bg-orange-300 mx-1.5">
+  <Image src={image4} alt="image4"  className="h-60 w-60"></Image>
+  
+  </div>
+<h1 className="font-bold text-lg my-4">Entertaining made easy: 3 ingredient crostinis</h1>
+{/* <p> Lorem ipsum de praesentium officiis nemo sed soluta, iste nulla dolorum.</p> */}
+<Link href="/blog3">READ MORE</Link>
+</div>
+
+<div className="card">
+  <div className="w-60 h-60 bg-orange-300 mx-1.5">
+  <Image src={image5} alt="image5"  className="h-60 w-60"></Image>
+  
+  </div>
+<h1 className="font-bold text-lg my-4">Skirt steak with caramelized broccoli</h1>
+{/* <p> Lorem ipsum de praesentium officiis nemo sed soluta, iste nulla dolorum.</p> */}
+<Link href="/blog4">READ MORE</Link>
+</div>
+
+<div className="card">
+  <div className="w-60 h-60 bg-orange-300  mx-1.5">
+  <Image src={image6} alt="image6"  className="h-60 "></Image>
+  
+  </div>
+<h1 className="font-bold text-lg my-4">Oven roasted asparagus with herb vinaigrette</h1>
+{/* <p> Lorem ipsum de praesentium officiis nemo sed soluta, iste nulla dolorum.</p> */}
+<Link href="/blog5">READ MORE</Link>
+</div>
+
+<div className="card">
+  <div className="w-60 h-60 bg-orange-300 mx-1.5">
+  <Image src={image7} alt="image7"  className="h-60 w-60 "></Image>
+  
+  </div>
+<h1 className="font-bold text-lg my-4">Cold smash drink ice coffee</h1>
+{/* <p> Lorem ipsum de praesentium officiis nemo sed soluta, iste nulla dolorum.</p> */}
+<Link href="/blog6">READ MORE</Link>
+</div>
+
+
+
+</div>
+  <Footer/>
+  </div>
     </div>
-  );
+  )
 }
